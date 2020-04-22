@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostsViewController" customModule="PostsApp" customModuleProvider="target">
+            <connections>
+                <outlet property="deleteButton" destination="f79-XN-c3g" id="fiB-9U-UX2"/>
+                <outlet property="postsTableView" destination="gSg-dF-LkV" id="gvc-Rx-cXn"/>
+                <outlet property="segmentedControl" destination="cmz-gv-ao3" id="LGi-ga-U6I"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f79-XN-c3g">
+                    <rect key="frame" x="0.0" y="745.5" width="414" height="52.5"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="deleteButtonTapped:" destination="-1" eventType="touchUpInside" id="aDe-mW-OSn"/>
+                    </connections>
+                </button>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cmz-gv-ao3">
+                    <rect key="frame" x="20.5" y="10" width="373" height="32"/>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                    </segments>
+                    <connections>
+                        <action selector="segmentedControlTapped:" destination="-1" eventType="valueChanged" id="WRP-4L-JyJ"/>
+                    </connections>
+                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gSg-dF-LkV">
+                    <rect key="frame" x="0.0" y="51" width="414" height="694.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cmz-gv-ao3" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="Ifp-1v-kST"/>
+                <constraint firstItem="f79-XN-c3g" firstAttribute="top" secondItem="gSg-dF-LkV" secondAttribute="bottom" id="ODn-xy-Bkv"/>
+                <constraint firstAttribute="bottom" secondItem="f79-XN-c3g" secondAttribute="bottom" constant="10" id="RT1-T9-Wto"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="f79-XN-c3g" secondAttribute="trailing" id="Y9D-qo-qgz"/>
+                <constraint firstItem="gSg-dF-LkV" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="Zw2-VQ-Y1c"/>
+                <constraint firstItem="cmz-gv-ao3" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="cTD-Eq-jEa"/>
+                <constraint firstItem="f79-XN-c3g" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iAi-Bv-38w"/>
+                <constraint firstItem="gSg-dF-LkV" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="mrx-mp-Ex7"/>
+                <constraint firstItem="gSg-dF-LkV" firstAttribute="top" secondItem="cmz-gv-ao3" secondAttribute="bottom" constant="10" id="nsB-yu-5TB"/>
+                <constraint firstItem="f79-XN-c3g" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.065" id="sEO-Hf-9ng"/>
+                <constraint firstItem="cmz-gv-ao3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="uLW-Z2-s91"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </view>
+    </objects>
+</document>
