@@ -11,7 +11,6 @@
 		3D752192244F83BD008F17E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D752191244F83BD008F17E2 /* SceneDelegate.swift */; };
 		3D752199244F83BE008F17E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D752198244F83BE008F17E2 /* Assets.xcassets */; };
 		3D75219C244F83BE008F17E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D75219A244F83BE008F17E2 /* LaunchScreen.storyboard */; };
-		3D7521A7244F83BF008F17E2 /* PostsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7521A6244F83BF008F17E2 /* PostsAppTests.swift */; };
 		3D7521B3244F8577008F17E2 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7521B1244F8577008F17E2 /* PostsViewController.swift */; };
 		3D7521B4244F8577008F17E2 /* PostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D7521B2244F8577008F17E2 /* PostsViewController.xib */; };
 		3D7521B7244F868C008F17E2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7521B6244F868C008F17E2 /* APIClient.swift */; };
@@ -29,6 +28,13 @@
 		3D7521DB244FB8E1008F17E2 /* PostDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D7521D9244FB8E1008F17E2 /* PostDetailViewController.xib */; };
 		3D7521DE244FB910008F17E2 /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7521DD244FB90F008F17E2 /* PostDetailViewModel.swift */; };
 		3D7521E0244FB933008F17E2 /* PostDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7521DF244FB933008F17E2 /* PostDetailCoordinator.swift */; };
+		3D7521E2244FD0B0008F17E2 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7521E1244FD0B0008F17E2 /* Comment.swift */; };
+		3D7521E42450D261008F17E2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7521E32450D261008F17E2 /* User.swift */; };
+		3D7521E624520646008F17E2 /* PostsGroupCellViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7521E524520646008F17E2 /* PostsGroupCellViewModels.swift */; };
+		3D7521E9245214F9008F17E2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7521E8245214F9008F17E2 /* Colors.swift */; };
+		3D7521EB245240FE008F17E2 /* PostsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7521EA245240FE008F17E2 /* PostsViewModelTests.swift */; };
+		3D7521ED2452448F008F17E2 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7521EC2452448F008F17E2 /* APIClientTests.swift */; };
+		3D7521EF245244D2008F17E2 /* PostCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7521EE245244D2008F17E2 /* PostCellViewModelTests.swift */; };
 		55F3FE46540B9F7FF9ACE381 /* Pods_PostsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5B10A9C83EE353144386F7 /* Pods_PostsApp.framework */; };
 		FF6960E5F99C864B1EFDB86F /* Pods_PostsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B57196241BC290C1379DD70 /* Pods_PostsAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -54,7 +60,6 @@
 		3D75219B244F83BE008F17E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D75219D244F83BE008F17E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D7521A2244F83BF008F17E2 /* PostsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D7521A6244F83BF008F17E2 /* PostsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsAppTests.swift; sourceTree = "<group>"; };
 		3D7521A8244F83BF008F17E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D7521B1244F8577008F17E2 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		3D7521B2244F8577008F17E2 /* PostsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsViewController.xib; sourceTree = "<group>"; };
@@ -73,6 +78,13 @@
 		3D7521D9244FB8E1008F17E2 /* PostDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailViewController.xib; sourceTree = "<group>"; };
 		3D7521DD244FB90F008F17E2 /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
 		3D7521DF244FB933008F17E2 /* PostDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailCoordinator.swift; sourceTree = "<group>"; };
+		3D7521E1244FD0B0008F17E2 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		3D7521E32450D261008F17E2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3D7521E524520646008F17E2 /* PostsGroupCellViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsGroupCellViewModels.swift; sourceTree = "<group>"; };
+		3D7521E8245214F9008F17E2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		3D7521EA245240FE008F17E2 /* PostsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModelTests.swift; sourceTree = "<group>"; };
+		3D7521EC2452448F008F17E2 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
+		3D7521EE245244D2008F17E2 /* PostCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellViewModelTests.swift; sourceTree = "<group>"; };
 		5A5B10A9C83EE353144386F7 /* Pods_PostsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78EB4B22C8B44426E7A642DA /* Pods-PostsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-PostsAppTests/Pods-PostsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9B57196241BC290C1379DD70 /* Pods_PostsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,7 +157,9 @@
 		3D7521A5244F83BF008F17E2 /* PostsAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				3D7521A6244F83BF008F17E2 /* PostsAppTests.swift */,
+				3D7521EC2452448F008F17E2 /* APIClientTests.swift */,
+				3D7521EE245244D2008F17E2 /* PostCellViewModelTests.swift */,
+				3D7521EA245240FE008F17E2 /* PostsViewModelTests.swift */,
 				3D7521A8244F83BF008F17E2 /* Info.plist */,
 			);
 			path = PostsAppTests;
@@ -163,7 +177,9 @@
 		3D7521BA244F8B4F008F17E2 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				3D7521E1244FD0B0008F17E2 /* Comment.swift */,
 				3D7521BB244F8B6C008F17E2 /* Posts.swift */,
+				3D7521E32450D261008F17E2 /* User.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -192,8 +208,9 @@
 		3D7521C4244F9F70008F17E2 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				3D7521BA244F8B4F008F17E2 /* Entities */,
 				3D7521B5244F8671008F17E2 /* APIClient */,
+				3D7521BA244F8B4F008F17E2 /* Entities */,
+				3D7521E7245214DC008F17E2 /* Extensions */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -210,6 +227,7 @@
 		3D7521CC244FA02E008F17E2 /* PostCell */ = {
 			isa = PBXGroup;
 			children = (
+				3D7521E524520646008F17E2 /* PostsGroupCellViewModels.swift */,
 				3D7521CA244FA027008F17E2 /* PostCellViewModel.swift */,
 				3D7521C6244F9FEC008F17E2 /* PostCell.swift */,
 				3D7521C7244F9FEC008F17E2 /* PostCell.xib */,
@@ -237,6 +255,14 @@
 				3D7521D3244FB845008F17E2 /* CommentCell.xib */,
 			);
 			path = CommentCell;
+			sourceTree = "<group>";
+		};
+		3D7521E7245214DC008F17E2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3D7521E8245214F9008F17E2 /* Colors.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A1E2707C21486B63500FA98D /* Frameworks */ = {
@@ -426,10 +452,14 @@
 				3D7521E0244FB933008F17E2 /* PostDetailCoordinator.swift in Sources */,
 				3D7521DA244FB8E1008F17E2 /* PostDetailViewController.swift in Sources */,
 				3D7521D7244FB857008F17E2 /* CommentCellViewModel.swift in Sources */,
+				3D7521E42450D261008F17E2 /* User.swift in Sources */,
 				3D752190244F83BD008F17E2 /* AppDelegate.swift in Sources */,
 				3D752192244F83BD008F17E2 /* SceneDelegate.swift in Sources */,
+				3D7521E624520646008F17E2 /* PostsGroupCellViewModels.swift in Sources */,
 				3D7521C8244F9FEC008F17E2 /* PostCell.swift in Sources */,
+				3D7521E9245214F9008F17E2 /* Colors.swift in Sources */,
 				3D7521B7244F868C008F17E2 /* APIClient.swift in Sources */,
+				3D7521E2244FD0B0008F17E2 /* Comment.swift in Sources */,
 				3D7521C2244F8E82008F17E2 /* PostsCoordinator.swift in Sources */,
 				3D7521CB244FA027008F17E2 /* PostCellViewModel.swift in Sources */,
 				3D7521C0244F8E6F008F17E2 /* PostsViewModel.swift in Sources */,
@@ -441,7 +471,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D7521A7244F83BF008F17E2 /* PostsAppTests.swift in Sources */,
+				3D7521ED2452448F008F17E2 /* APIClientTests.swift in Sources */,
+				3D7521EF245244D2008F17E2 /* PostCellViewModelTests.swift in Sources */,
+				3D7521EB245240FE008F17E2 /* PostsViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,7 +627,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jeffveleze.PostsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -613,7 +645,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jeffveleze.PostsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

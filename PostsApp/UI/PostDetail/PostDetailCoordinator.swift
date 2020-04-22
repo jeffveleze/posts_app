@@ -9,12 +9,15 @@
 import Foundation
 import UIKit.UIWindow
 
-protocol PostDetailCoordinatorDelegate: AnyObject {}
+protocol PostDetailCoordinatorDelegate: AnyObject {
+    func postDetailCoordinator(_ coordinator: PostDetailCoordinator, didMarkAsFavorite postVm: PostCellViewModel)
+}
 
 final class PostDetailCoordinator {
     let navigationController: UINavigationController
     let apiClient: APIClientProtocol
-    let post: Post
+    let postVm: PostCellViewModel
+    let user: User
     
     var postDetailViewController: PostDetailViewController!
     
@@ -23,11 +26,13 @@ final class PostDetailCoordinator {
     init (
         navigationController: UINavigationController,
         apiClient: APIClientProtocol,
-        post: Post
+        postVm: PostCellViewModel,
+        user: User
     ) {
         self.navigationController = navigationController
         self.apiClient = apiClient
-        self.post = post
+        self.postVm = postVm
+        self.user = user
     }
 }
 
@@ -40,15 +45,22 @@ extension PostDetailCoordinator: Coordinatable {
     }
     
     func makePostDetailViewController() -> PostDetailViewController {
-        let viewModel = PostDetailViewModel(apiClient: apiClient, post: post)
+        let viewModel = PostDetailViewModel(
+            apiClient: apiClient,
+            postVm: postVm,
+            user: user
+        )
+        
         viewModel.coordinatorDelegate = self
         return PostDetailViewController(viewModel: viewModel)
     }
 }
 
 extension PostDetailCoordinator: PostDetailViewModelCoordinatorDelegate {
-    func postDetailViewModelDidFinish(_ viewModel: PostDetailViewModelProtocol) {
-        
+    func postDetailViewModel(_ viewModel: PostDetailViewModelProtocol, didMarkAsFavorite postVm: PostCellViewModel) {
+        delegate?.postDetailCoordinator(self, didMarkAsFavorite: postVm)
     }
+    
+    func postDetailViewModelDidFinish(_ viewModel: PostDetailViewModelProtocol) {}
 }
 

@@ -38,19 +38,20 @@ enum APIRouterError: LocalizedError {
 
 enum APIRoute {
     case posts
-    case comments
-    case user
+    case comments(postID: Int)
+    case users
     
     func path() -> String {
         let baseURL: String = "https://jsonplaceholder.typicode.com"
 
+        // Make full request path
         switch self {
            case .posts:
              return "\(baseURL)/posts"
-        case .comments:
-            return "\(baseURL)/comments"
-        case .user:
-            return "\(baseURL)/user"
+        case let .comments(postID):
+            return "\(baseURL)/comments?postId=\(postID)"
+        case .users:
+            return "\(baseURL)/users"
         }
     }
 }

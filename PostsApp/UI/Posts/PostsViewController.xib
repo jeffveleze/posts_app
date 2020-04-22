@@ -21,8 +21,12 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f79-XN-c3g">
-                    <rect key="frame" x="0.0" y="745.5" width="414" height="52.5"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="0.0" y="751.5" width="414" height="56.5"/>
+                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
                     <connections>
                         <action selector="deleteButtonTapped:" destination="-1" eventType="touchUpInside" id="aDe-mW-OSn"/>
                     </connections>
@@ -30,15 +34,15 @@
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cmz-gv-ao3">
                     <rect key="frame" x="20.5" y="10" width="373" height="32"/>
                     <segments>
-                        <segment title="First"/>
-                        <segment title="Second"/>
+                        <segment title="All"/>
+                        <segment title="Favorites"/>
                     </segments>
                     <connections>
                         <action selector="segmentedControlTapped:" destination="-1" eventType="valueChanged" id="WRP-4L-JyJ"/>
                     </connections>
                 </segmentedControl>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gSg-dF-LkV">
-                    <rect key="frame" x="0.0" y="51" width="414" height="694.5"/>
+                    <rect key="frame" x="0.0" y="51" width="414" height="700.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
             </subviews>
@@ -46,14 +50,14 @@
             <constraints>
                 <constraint firstItem="cmz-gv-ao3" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="Ifp-1v-kST"/>
                 <constraint firstItem="f79-XN-c3g" firstAttribute="top" secondItem="gSg-dF-LkV" secondAttribute="bottom" id="ODn-xy-Bkv"/>
-                <constraint firstAttribute="bottom" secondItem="f79-XN-c3g" secondAttribute="bottom" constant="10" id="RT1-T9-Wto"/>
+                <constraint firstAttribute="bottom" secondItem="f79-XN-c3g" secondAttribute="bottom" id="RT1-T9-Wto"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="f79-XN-c3g" secondAttribute="trailing" id="Y9D-qo-qgz"/>
                 <constraint firstItem="gSg-dF-LkV" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="Zw2-VQ-Y1c"/>
                 <constraint firstItem="cmz-gv-ao3" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="cTD-Eq-jEa"/>
                 <constraint firstItem="f79-XN-c3g" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iAi-Bv-38w"/>
                 <constraint firstItem="gSg-dF-LkV" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="mrx-mp-Ex7"/>
                 <constraint firstItem="gSg-dF-LkV" firstAttribute="top" secondItem="cmz-gv-ao3" secondAttribute="bottom" constant="10" id="nsB-yu-5TB"/>
-                <constraint firstItem="f79-XN-c3g" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.065" id="sEO-Hf-9ng"/>
+                <constraint firstItem="f79-XN-c3g" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.07" id="sEO-Hf-9ng"/>
                 <constraint firstItem="cmz-gv-ao3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="uLW-Z2-s91"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>

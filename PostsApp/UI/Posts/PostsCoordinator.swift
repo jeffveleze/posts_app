@@ -52,11 +52,12 @@ extension PostsCoordinator: Coordinatable {
 extension PostsCoordinator: PostsViewModelCoordinatorDelegate {
     func postsViewModelDidFinish(_ viewModel: PostsViewModelProtocol) {}
 
-    func postsViewModelDidSelect(post: Post) {
+    func postsViewModelDidSelect(postVm: PostCellViewModel, user: User) {
         let coordinator = PostDetailCoordinator(
             navigationController: navigationController,
             apiClient: apiClient,
-            post: post
+            postVm: postVm,
+            user: user
         )
 
         coordinator.delegate = self
@@ -69,5 +70,7 @@ extension PostsCoordinator: PostsViewModelCoordinatorDelegate {
 // MARK: - PostDetailCoordinatorDelegate
 
 extension PostsCoordinator: PostDetailCoordinatorDelegate {
-
+    func postDetailCoordinator(_ coordinator: PostDetailCoordinator, didMarkAsFavorite postVm: PostCellViewModel) {
+        postsViewController.didMarkAsFavorite(postVm: postVm)
+    }
 }

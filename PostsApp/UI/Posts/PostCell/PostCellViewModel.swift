@@ -9,20 +9,28 @@
 import Foundation
 import UIKit.UIImage
 
-protocol PostCellViewModelViewDelegate: AnyObject {}
+protocol PostCellViewModelViewDelegate: AnyObject {
+    func postCellViewModelShouldUpdateImage(_ viewModel: PostCellViewModelProtocol)
+}
 
 protocol PostCellViewModelProtocol: AnyObject {
     var post: Post { get }
     var viewDelegate: PostCellViewModelViewDelegate? { get set }
+    
+    var isUnread: Bool { get set }
+    var isFavorite: Bool { get set }
 
     init(post: Post)
     
     func makeTitleText() -> String
-    func makeImage() -> UIImage
+    func makeImage() -> UIImage?
 }
 
-final class PostCellViewModel: PostCellViewModelProtocol {
-    var post: Post
+final class PostCellViewModel: PostCellViewModelProtocol, Codable {
+    let post: Post
+    
+    var isUnread: Bool = false
+    var isFavorite: Bool = false
     
     var viewDelegate: PostCellViewModelViewDelegate?
     
@@ -34,8 +42,22 @@ final class PostCellViewModel: PostCellViewModelProtocol {
         return post.title.capitalized
     }
     
-    func makeImage() -> UIImage {
-        return UIImage()
+    func makeImage() -> UIImage? {
+        if isFavorite {
+            return UIImage(imageLiteralResourceName: "Favorite")
+        }
+        
+        if isUnread {
+            return UIImage(imageLiteralResourceName: "Bluedot")
+        }
+        
+        return nil
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case post = "post"
+        case isUnread = "isUnread"
+        case isFavorite = "isFavorite"
     }
 }
 

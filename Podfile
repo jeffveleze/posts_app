@@ -6,9 +6,11 @@ target 'PostsApp' do
   use_frameworks!
 
   # Pods for PostsApp
-  pod 'Alamofire', '~> 5.0'
+  pod "Alamofire", '~> 5.0.0'
+  pod "AlamofireNetworkActivityLogger", '~> 3.0'
   pod "PromiseKit", '~> 6.8'
   pod "Reusable", '~> 4.1.0'
+  pod "PKHUD", '~> 5.0'
 
   target 'PostsAppTests' do
     inherit! :search_paths

@@ -16,16 +16,35 @@ final class PostCell: UITableViewCell, NibReusable {
         
     var viewModel: PostCellViewModelProtocol! {
         didSet {
-            statusImage.image = viewModel.makeImage()
+            setImage()
             titleText.text = viewModel.makeTitleText()
             
             viewModel.viewDelegate = self
         }
+    }
+    
+    func setImage() {
+        if let image = viewModel.makeImage() {
+            statusImage.image = image
+        }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        reset()
+    }
+    
+    private func reset() {
+        statusImage.image = nil
+        titleText.text = nil
     }
 }
 
 // MARK: - PostCellViewModelDelegate
 
 extension PostCell: PostCellViewModelViewDelegate {
-    
+    func postCellViewModelShouldUpdateImage(_ viewModel: PostCellViewModelProtocol) {
+        setImage()
+    }
 }

@@ -12,6 +12,8 @@ import PromiseKit
 
 protocol APIClientProtocol {
     func fetchPosts() -> Promise<[Post]>
+    func fetchUsers() -> Promise<[User]>
+    func fetchComments(postID: Int) -> Promise<[Comment]>
 }
 
 // Interface to handle API calls
@@ -34,6 +36,16 @@ final class APIClient: APIClientProtocol {
     
     func fetchPosts() -> Promise<[Post]> {
         let route = APIRouter(urlString: APIRoute.posts.path())
+        return performRequest(route: route)
+    }
+    
+    func fetchUsers() -> Promise<[User]> {
+        let route = APIRouter(urlString: APIRoute.users.path())
+        return performRequest(route: route)
+    }
+    
+    func fetchComments(postID: Int) -> Promise<[Comment]> {
+        let route = APIRouter(urlString: APIRoute.comments(postID: postID).path())
         return performRequest(route: route)
     }
 }
